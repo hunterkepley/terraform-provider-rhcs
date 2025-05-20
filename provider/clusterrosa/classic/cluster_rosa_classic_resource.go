@@ -1218,7 +1218,7 @@ func (r *ClusterRosaClassicResource) upgradeClusterIfNeeded(ctx context.Context,
 	if !cancelingUpgradeOnly {
 		if err = r.validateUpgrade(ctx, state, plan); err != nil {
 			return err
-		}
+		} // test
 	}
 
 	// Fetch existing upgrade policies
