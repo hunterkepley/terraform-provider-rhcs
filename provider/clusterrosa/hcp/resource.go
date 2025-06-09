@@ -1460,9 +1460,9 @@ func populateRosaHcpClusterState(ctx context.Context, object *cmv1.Cluster, stat
 
 	}
 
-	awsPrivateLink, ok := object.AWS().GetPrivateLink()
+	awsPrivateApi, ok := object.AWS().GetPrivateLink()
 	if ok {
-		state.Private = types.BoolValue(awsPrivateLink)
+		state.Private = types.BoolValue(awsPrivateApi)
 	} else {
 		state.Private = types.BoolValue(true)
 	}
